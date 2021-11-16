@@ -2,7 +2,7 @@
 	"name": "@frc1711/raptors1711.com",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://frc1711.github.io/raptors1711.com/",
+	"homepage": "https://raptors1711.com/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.15.0",
 		"@testing-library/react": "^11.2.7",
