@@ -1,0 +1,55 @@
+@import "../../assets/styles/variables";
+
+header {
+	
+	$spacing: 10px;
+	
+	@include expandToMaxWidth();
+	
+	margin: $spacing 0;
+	
+	div.header-content {
+		
+		display: flex;
+		padding: 0 $spacing;
+		
+		div.site-title {
+			
+			display: inline-block;
+			
+			h1 {
+				
+				font-family: "Spy Agency", sans-serif;
+				
+				margin-right: $spacing;
+				
+			}
+			
+		}
+		
+		nav {
+			
+			flex: 1;
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			a {
+				
+				color: inherit;
+				padding: 5px;
+				
+			}
+			
+		}
+		
+	}
+	
+	hr {
+		
+		margin-top: $spacing;
+		
+	}
+	
+}

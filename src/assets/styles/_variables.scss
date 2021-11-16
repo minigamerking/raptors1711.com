@@ -1,0 +1,8 @@
+$pageWidth: 1000px;
+
+@mixin expandToMaxWidth($maxWidth: $pageWidth) {
+	
+	width: 100%;
+	max-width: $maxWidth;
+	
+}

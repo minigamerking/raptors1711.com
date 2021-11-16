@@ -1,0 +1,59 @@
+@import "../../assets/styles/_variables";
+
+footer {
+	
+	$spacing: 10px;
+	
+	@include expandToMaxWidth();
+	
+	margin: $spacing 0;
+	
+	.frc-logo-horizontal-rule {
+		
+		margin-bottom: 8px;
+		
+	}
+	
+	.footer-content {
+		
+		padding: 0 $spacing / 2;
+		
+		.row {
+			
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			p.repo-link, p.made-with-love {
+				
+				flex: 1;
+				display: inline-block;
+				font-size: 0.7em;
+				
+				a {
+					
+					color: #8CA9EE;
+					
+				}
+				
+			}
+			
+			p.made-with-love {
+				
+				text-align: right;
+				
+			}
+			
+			.social-media-icons {
+				
+				flex: 1;
+				
+			}
+			
+		}
+		
+		
+		
+	}
+	
+}

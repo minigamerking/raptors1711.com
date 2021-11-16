@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables";
+
+.page {
+	
+	height: 100%;
+	padding: 0 20px;
+	
+	&.centered {
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	}
+	
+	main {
+		
+		flex: 1;
+		
+		width: 100%;
+		max-width: $pageWidth;
+		
+	}
+	
+	&.full-width main {
+		
+		max-width: none;
+		
+	}
+	
+}
