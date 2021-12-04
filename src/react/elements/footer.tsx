@@ -15,9 +15,9 @@ export class Footer extends React.Component<Props, State> {
 				<FRCLogoHorizontalRule />
 				<div className="footer-content">
 					<div className="row">
-						<p className="repo-link">find this site on <a target="_blank" href="https://github.com/frc1711/raptors1711.com">GitHub</a></p>
+						<p className="repo-link">find this site on <a target="_blank" rel="noreferrer" href="https://github.com/frc1711/raptors1711.com">GitHub</a></p>
 						<SocialMediaIcons />
-						<p className="made-with-love">made with ❤️ by <a target="_blank" href="https://github.com/T99">Trevor Sears</a></p>
+						<p className="made-with-love">made with ❤️ by <a target="_blank" rel="noreferrer" href="https://github.com/T99">Trevor Sears</a></p>
 					</div>
 				</div>
 			</footer>
