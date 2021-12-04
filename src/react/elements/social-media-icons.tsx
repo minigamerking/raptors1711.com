@@ -43,8 +43,6 @@ export class SocialMediaIcons extends React.Component<Props, State> {
     
     public render(): React.ReactNode {
     	
-    	console.log(this.props.icons);
-    	
     	let icons: React.ReactNode = Object.keys(this.props.icons ?? {}).map(
 			(name: string): React.ReactNode => {
 				
