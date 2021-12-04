@@ -1,0 +1,19 @@
+.announcement-banner {
+	
+	background-color: #ED1D24;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	p {
+		
+		max-width: 1000px;
+		padding: 10px 5px;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		
+	}
+	
+}
