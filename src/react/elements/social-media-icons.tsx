@@ -1,8 +1,8 @@
 import "./social-media-icons.scss";
-import { ReactComponent as FacebookIcon } from "../../assets/images/facebook.svg";
-import { ReactComponent as GitHubIcon } from "../../assets/images/github.svg";
-import { ReactComponent as InstagramIcon } from "../../assets/images/instagram.svg";
-import { ReactComponent as TwitterIcon } from "../../assets/images/twitter.svg";
+import { ReactComponent as FacebookIcon } from "../../assets/images/icons/facebook.svg";
+import { ReactComponent as GitHubIcon } from "../../assets/images/icons/github.svg";
+import { ReactComponent as InstagramIcon } from "../../assets/images/icons/instagram.svg";
+import { ReactComponent as TwitterIcon } from "../../assets/images/icons/twitter.svg";
 import React from "react";
 
 export type Props = Readonly<{
