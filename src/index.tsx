@@ -5,10 +5,23 @@ import reportWebVitals from './reportWebVitals';
 import { Home } from "./react/pages/home";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById('react-root')
+    <React.StrictMode>
+        <div id="debug" style={{
+            backgroundColor: "#ED1D24",
+            display: "flex",
+            justifyContent: "center"
+        }}>
+            <p style={{
+                maxWidth: "1000px",
+                padding: "10px 5px",
+                textAlign: "center",
+                color: "white",
+                fontWeight: "bold"
+            }}>Due to the rising COVID-19 numbers in our targeted age group (2-12 year olds) we have decided to postpone Super Science Saturday. This was a tough decision to make, but we feel for the safety of all involved that this is the best course of action. We are hoping to reschedule this event for the Spring of 2022.</p>
+        </div>
+        <Home />
+    </React.StrictMode>,
+    document.getElementById('react-root')
 );
 
 // If you want to start measuring performance in your app, pass a function
