@@ -1,6 +1,8 @@
+@import "../../assets/styles/_variables";
+
 .announcement-banner {
 	
-	background-color: #ED1D24;
+	background-color: $firstBlue;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
