@@ -1,7 +1,7 @@
 import "./footer.scss";
 import React from "react";
-import { FRCLogoHorizontalRule } from "./frc-logo-horizontal-rule";
-import { SocialMediaIcons } from "./social-media-icons";
+import { FRCLogoHorizontalRule } from "../frc-logo-horizontal-rule";
+import { SocialMediaIcons } from "../social-media-icons";
 
 export type Props = Readonly<{}>;
 export type State = Readonly<{}>;

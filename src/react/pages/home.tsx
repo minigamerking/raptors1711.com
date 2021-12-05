@@ -1,7 +1,7 @@
 import "./home.scss";
 import teamKickoffPicture from "../../assets/images/full-team-picture-kickoff-2019.jpg";
 import React from "react";
-import { Page } from "../elements/page";
+import { Page } from "../elements/page-flow/page";
 
 export type Props = Readonly<{}>;
 export type State = Readonly<{}>;
