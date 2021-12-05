@@ -35,7 +35,7 @@ export class Header extends React.Component<Props, State> {
 			"Outreach": "/outreach",
 			"Photo Gallery": "/photo-gallery",
 			"More": "/more"
-		}
+		};
 		
 	}
     
