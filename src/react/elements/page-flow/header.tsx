@@ -1,5 +1,6 @@
 import "./header.scss";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export type NavigationLinks = {
 	
@@ -48,7 +49,7 @@ export class Header extends React.Component<Props, State> {
 				let name: string = entry[0];
 				
 				return (
-					<a href={link} key={name}>{name}</a>
+					<Link to={link} key={name}>{name}</Link>
 				);
 			}
 		);
