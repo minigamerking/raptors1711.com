@@ -1,24 +1,15 @@
-.page-home {
+.page-home main {
 	
-	background-color: #282C34;
-	color: white;
+	img.banner-image {
+		
+		width: 100%;
+		padding: 10px 0;
+		
+	}
 	
-	main {
+	p {
 		
-		padding: 0 10px;
-		
-		img.banner-image {
-			
-			width: 100%;
-			padding: 10px 0;
-			
-		}
-		
-		p {
-			
-			text-align: justify;
-			
-		}
+		text-align: justify;
 		
 	}
 	
