@@ -9,3 +9,11 @@ $firstRed: #ED1C24;
 	max-width: $maxWidth;
 	
 }
+
+@mixin scale-fix {
+	
+	backface-visibility: hidden;
+	transform: perspective(1px) translateZ(0);
+	-webkit-font-smoothing: subpixel-antialiased;
+	
+}
