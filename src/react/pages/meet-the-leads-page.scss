@@ -1,0 +1,29 @@
+.page-meet-the-leads main {
+
+	.lead-profile {
+		
+		height: 30vh;
+		display: flex;
+		align-items: stretch;
+		
+		.lead-images {
+		
+			flex: 1;
+			
+			img {
+				
+				height: 100%;
+				
+			}
+		
+		}
+		
+		.lead-info {
+		
+			flex: 2;
+			
+		}
+		
+	}
+
+}
