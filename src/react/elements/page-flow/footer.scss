@@ -6,7 +6,8 @@ footer {
 	
 	@include expandToMaxWidth();
 	
-	margin: $spacing 0;
+	margin-bottom: $spacing;
+	background-color: var(--color-bg);
 	
 	.frc-logo-horizontal-rule {
 		

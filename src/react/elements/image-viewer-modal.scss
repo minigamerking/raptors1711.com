@@ -35,13 +35,13 @@
 			
 			&.left svg, &.right svg {
 				
-				color: $firstBlue;
+				color: var(--color-first-blue);
 				
 			}
 			
 			&.close svg {
 				
-				color: $firstRed;
+				color: var(--color-first-red);
 				
 			}
 			

@@ -2,15 +2,12 @@
 
 .page {
 	
-	$backgroundColor: #282C34;
-	$foregroundColor: white;
-	
 	height: 100%;
 	padding: 0 20px;
 	overflow: scroll;
 	
-	background-color: $backgroundColor;
-	color: $foregroundColor;
+	background-color: var(--color-bg);
+	color: var(--color-fg);
 	
 	&.centered {
 		
@@ -25,8 +22,11 @@
 		flex: 1;
 		
 		width: 100%;
-		max-width: $pageWidth;
-		padding: 0 10px;
+		max-width: var(--page-width);
+		padding: 10px 10px;
+		
+		box-shadow: -15px 0 15px -15px #000A,
+		             15px 0 15px -15px #000A;
 		
 	}
 	
@@ -38,8 +38,8 @@
 	
 	::selection {
 		
-		background: $foregroundColor;
-		color: $backgroundColor;
+		background: var(--color-fg);
+		color: var(--color-bg);
 		
 	}
 	
