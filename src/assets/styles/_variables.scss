@@ -18,7 +18,16 @@ $firstRed: #ED1C24;
 @mixin expandToMaxWidth($maxWidth: $pageWidth) {
 	
 	width: 100%;
-	max-width: $maxWidth;
+	
+	@if ($maxWidth == $pageWidth) {
+		
+		max-width: var(--page-width);
+		
+	} @else {
+		
+		max-width: $maxWidth;
+		
+	}
 	
 }
 
