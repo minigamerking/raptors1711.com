@@ -30,12 +30,12 @@ export class AboutUs extends React.Component<Props, State> {
 						</p>
 					</div>
 					<div className="img-box">
-						<img src={aboutUsImg1} />
+						<img src={aboutUsImg1} alt="Three RAPTORS team members wearing dinosaur costumes." />
 					</div>
 				</div>
 				<div className="left-right-split">
 					<div className="img-box">
-						<img src={aboutUsImg2} />
+						<img src={aboutUsImg2} alt="The RAPTORS' mascot being waved during a competition." />
 					</div>
 					<div className="text-box">
 						<p>
@@ -54,12 +54,12 @@ export class AboutUs extends React.Component<Props, State> {
 						</p>
 					</div>
 					<div className="img-box">
-						<img src={aboutUsImg3} />
+						<img src={aboutUsImg3} alt="A number of RAPTORS team members running a booth at the Super Science Saturday event." />
 					</div>
 				</div>
 				<div className="left-right-split">
 					<div className="img-box">
-						<img src={aboutUsImg4} />
+						<img src={aboutUsImg4} alt="A number of RAPTORS team members cheering from the stands during an FRC competition." />
 					</div>
 					<div className="text-box">
 						<p>
