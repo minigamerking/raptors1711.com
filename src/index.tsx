@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { Home } from "./react/pages/home";
-import { AnnouncementBanner } from "./react/elements/announcement-banner";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AboutUs } from "./react/pages/about-us";
 import { NotFound } from "./react/pages/not-found";
