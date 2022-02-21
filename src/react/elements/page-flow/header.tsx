@@ -1,6 +1,7 @@
 import "./header.scss";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Logo } from "../logo";
 
 export type NavigationLinks = {
 	
@@ -98,9 +99,7 @@ export class Header extends React.Component<Props, State> {
 		return (
 			<header>
 				<div className="header-content">
-					<div className="site-title">
-						<h1>RAPTOR<br />Robotics</h1>
-					</div>
+					<Logo>RAPTOR<br/>Robotics</Logo>
 					<nav>
 						{ navigationContent }
 					</nav>

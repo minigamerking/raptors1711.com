@@ -14,17 +14,10 @@ header {
 		display: flex;
 		padding: 0 $spacing;
 		
-		div.site-title {
+		.logo {
 			
 			display: inline-block;
-			
-			h1 {
-				
-				font-family: "Spy Agency", sans-serif;
-				
-				margin-right: $spacing;
-				
-			}
+			margin-right: $spacing;
 			
 		}
 		
