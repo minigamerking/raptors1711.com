@@ -1,6 +1,4 @@
-# Credit to Clyde D'Souza on codeburst.io for this workflow
-# https://codeburst.io/deploying-a-react-app-using-github-pages-and-github-actions-7fc14d380796
-name: Build & deploy
+name: Build & Test React App
 
 on:
   push:
@@ -33,27 +31,3 @@ jobs:
       - name: Run tests
         run: npm run test
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
-        with:
-          name: production-files
-          path: ./build
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: production-files
-          path: ./build
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
