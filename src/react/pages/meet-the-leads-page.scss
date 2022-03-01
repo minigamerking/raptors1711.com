@@ -1,26 +1,35 @@
 .page-meet-the-leads main {
-
-	.lead-profile {
+	
+	.text-image-box .text-box {
 		
-		height: 30vh;
-		display: flex;
-		align-items: stretch;
-		
-		.lead-images {
-		
-			flex: 1;
+		.lead-header {
 			
-			img {
+			display: flex;
+			align-items: baseline;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 5px;
+			
+			h4, h6 {
 				
-				height: 100%;
+				padding: 0 5px;
+				white-space: nowrap;
 				
 			}
-		
-		}
-		
-		.lead-info {
-		
-			flex: 2;
+			
+			h4 {
+				
+				font-size: 1.6em;
+				
+			}
+			
+			h6 {
+				
+				font-size: 1em;
+				opacity: 0.8;
+				font-weight: normal;
+				
+			}
 			
 		}
 		
