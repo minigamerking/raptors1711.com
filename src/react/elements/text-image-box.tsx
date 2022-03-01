@@ -4,7 +4,9 @@ import React, { ReactNode } from "react";
 export type Props = {
     image: string,
 	imageAlt: string
-	reverse?: boolean
+	reverse?: boolean,
+	className?: string
+	id?: string
 };
 
 type State = {};
@@ -21,9 +23,10 @@ export class TextImageBox extends React.Component<Props, State> {
     	let classes: string[] = ["text-image-box"];
     	
     	if (this.props.reverse) classes.push("reverse");
+		if (this.props.className) classes.push(this.props.className);
 		
 		return (
-			<div className={classes.join(" ")}>
+			<div className={classes.join(" ")} id={this.props.id}>
 				<div className="text-box">
 					{content}
 				</div>

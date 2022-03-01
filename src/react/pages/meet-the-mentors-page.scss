@@ -1,0 +1,66 @@
+.page-meet-the-mentors main {
+	
+	.text-image-box {
+		
+		.text-box {
+			
+			.mentor-header {
+				
+				display: flex;
+				align-items: baseline;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-bottom: 5px;
+				
+				h4, h6 {
+					
+					padding: 0 5px;
+					white-space: nowrap;
+					
+				}
+				
+				h4 {
+					
+					font-size: 1.6em;
+					
+				}
+				
+				h6 {
+					
+					font-size: 1em;
+					opacity: 0.8;
+					font-weight: normal;
+					
+				}
+				
+			}
+			
+		}
+		
+		&.leilani-sigsbey .image-box img {
+			
+			object-position: center 30%;
+			
+		}
+		
+		&.jeremiah-stieve .image-box img {
+			
+			object-position: center 10%;
+			
+		}
+		
+		&.russ-riker .image-box img {
+			
+			object-position: center 30%;
+			
+		}
+		
+		&.eric-smith .image-box img {
+			
+			object-position: center 40%;
+			
+		}
+		
+	}
+
+}
