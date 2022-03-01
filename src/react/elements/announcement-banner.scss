@@ -2,7 +2,7 @@
 
 .announcement-banner {
 	
-	background-color: $firstRed;
+	background-color: var(--color-first-red);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

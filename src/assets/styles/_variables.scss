@@ -1,12 +1,33 @@
 $pageWidth: 1000px;
 
+$backgroundColor: #282C34;
+$foregroundColor: white;
 $firstBlue: #0066B3;
 $firstRed: #ED1C24;
+
+:root {
+	
+	--page-width: #{$pageWidth};
+	--color-bg: #{$backgroundColor};
+	--color-fg: #{$foregroundColor};
+	--color-first-blue: #{$firstBlue};
+	--color-first-red: #{$firstRed};
+	
+}
 
 @mixin expandToMaxWidth($maxWidth: $pageWidth) {
 	
 	width: 100%;
-	max-width: $maxWidth;
+	
+	@if ($maxWidth == $pageWidth) {
+		
+		max-width: var(--page-width);
+		
+	} @else {
+		
+		max-width: $maxWidth;
+		
+	}
 	
 }
 

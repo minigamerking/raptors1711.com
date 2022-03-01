@@ -6,24 +6,18 @@ header {
 	
 	@include expandToMaxWidth();
 	
-	margin: $spacing 0;
+	margin-top: $spacing;
+	background-color: var(--color-bg);
 	
 	div.header-content {
 		
 		display: flex;
 		padding: 0 $spacing;
 		
-		div.site-title {
+		.logo {
 			
 			display: inline-block;
-			
-			h1 {
-				
-				font-family: "Spy Agency", sans-serif;
-				
-				margin-right: $spacing;
-				
-			}
+			margin-right: $spacing;
 			
 		}
 		
@@ -36,33 +30,87 @@ header {
 			align-items: center;
 			padding: 0 5%;
 			
-			a {
+			.nav-item {
 				
-				color: inherit;
-				padding: 5px;
-				text-decoration: none;
-				text-transform: uppercase;
-				letter-spacing: -0.5px;
+				flex: 1;
+				position: relative;
+				display: flex;
+				justify-content: center;
 				
-				&:hover:before, &:hover:after{
+				& > a {
 					
-					opacity: 1;
+					color: inherit;
+					padding: 5px;
+					text-align: center;
+					text-decoration: none;
+					text-transform: uppercase;
+					letter-spacing: -0.5px;
+					white-space: nowrap;
+					
+					&:hover:before, &:hover:after{
+						
+						opacity: 1;
+						
+					}
+					
+					&:before, &:after {
+						
+						content: " — ";
+						position: absolute;
+						white-space: pre;
+						opacity: 0;
+						transition: opacity 0.25s ease;
+						
+					}
+					
+					&:before {
+						
+						transform: translateX(-100%);
+						
+					}
 					
 				}
 				
-				&:before, &:after {
+				&:hover {
 					
-					content: " — ";
+					.nav-item-dropdown {
+					
+						display: initial;
+					
+					}
+					
+				}
+				
+				.nav-item-dropdown {
+					
 					position: absolute;
-					white-space: pre;
-					opacity: 0;
-					transition: opacity 0.25s ease;
+					top: 100%;
+					display: none;
+					flex-direction: column;
+					background-color: var(--color-bg);
+					box-shadow: 0 8px 8px #000A;
+					padding: 6px;
+					border: {
+						
+						left: 1px solid grey;
+						bottom: 1px solid grey;
+						right: 1px solid grey;
+						
+					}
 					
-				}
-				
-				&:before {
+					.nav-item-dropdown-entry {
 					
-					transform: translateX(-100%);
+						display: block;
+						color: var(--color-fg);
+						text-decoration: none;
+						
+						&:hover {
+							
+							text-decoration: underline;
+							
+						}
+					
+					}
 					
 				}
 				
