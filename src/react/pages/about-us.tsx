@@ -1,8 +1,8 @@
 import "./about-us.scss";
-import aboutUsImg1 from "../../assets/images/about-us-1.jpeg";
-import aboutUsImg2 from "../../assets/images/about-us-2.jpeg";
+import aboutUsImg1 from "../../assets/images/about-us-1.jpg";
+import aboutUsImg2 from "../../assets/images/about-us-2.jpg";
 import aboutUsImg3 from "../../assets/images/about-us-3.jpg";
-import aboutUsImg4 from "../../assets/images/about-us-4.png";
+import aboutUsImg4 from "../../assets/images/about-us-4.jpg";
 import React from "react";
 import { Page } from "../elements/page-flow/page";
 import { PageHeading } from "../elements/page-heading";
