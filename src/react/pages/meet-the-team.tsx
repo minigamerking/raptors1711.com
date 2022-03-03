@@ -1,4 +1,4 @@
-import "./about-us.scss";
+import "./meet-the-team.scss";
 import aboutUsImg1 from "../../assets/images/about-us-1.jpg";
 import aboutUsImg2 from "../../assets/images/about-us-2.jpg";
 import aboutUsImg3 from "../../assets/images/about-us-3.jpg";
