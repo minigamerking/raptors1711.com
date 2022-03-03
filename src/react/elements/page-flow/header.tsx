@@ -33,15 +33,13 @@ export class Header extends React.Component<Props, State> {
 		
 		return {
 			"Home": "/home",
-			"About Us": "/about-us",
-			"Outreach": "/outreach",
-			"Photo Gallery": "/photo-gallery",
-			"More": {
-				"More": "/contact-us",
+			"Meet the Team": {
+				"Meet the Team": "/meet-the-team",
 				"Meet the Leads": "/meet-the-leads",
 				"Meet the Mentors": "/meet-the-mentors",
-				"Sponsor Us": "/sponsorship"
-			}
+			},
+			"Sponsor Us": "/sponsorship",
+			"Contact Us": "/contact-us"
 		};
 		
 	}

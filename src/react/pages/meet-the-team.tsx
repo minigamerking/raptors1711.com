@@ -17,7 +17,7 @@ type AboutUsSection = {
 export type Props = Readonly<{}>;
 export type State = Readonly<{}>;
 
-export class AboutUs extends React.Component<Props, State> {
+export class MeetTheTeam extends React.Component<Props, State> {
 	
 	public static readonly SECTIONS: AboutUsSection[] = [
 		{
@@ -69,7 +69,7 @@ export class AboutUs extends React.Component<Props, State> {
 		let sections: React.ReactNode[] = [];
 		let reversed: boolean = true;
 		
-		for (let section of AboutUs.SECTIONS) {
+		for (let section of MeetTheTeam.SECTIONS) {
 			
 			sections.push(
 				<TextImageBox image={section.image}
@@ -82,8 +82,8 @@ export class AboutUs extends React.Component<Props, State> {
 		}
     	
     	return (
-			<Page name="about-us">
-				<PageHeading>About Us!</PageHeading>
+			<Page name="meet-the-team">
+				<PageHeading>Meet the Team</PageHeading>
 				{sections}
 			</Page>
 		);
