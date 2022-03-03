@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { Home } from "./react/pages/home";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { AboutUs } from "./react/pages/about-us";
+import { MeetTheTeam } from "./react/pages/meet-the-team";
 import { NotFound } from "./react/pages/not-found";
 import { ContactUs } from "./react/pages/contact-us";
 import { MeetTheLeadsPage } from "./react/pages/meet-the-leads-page";
@@ -17,10 +17,11 @@ ReactDOM.render(
                 <Route index element={<Navigate replace to="/home" />} />
                 <Route path="/index" element={<Navigate replace to="/home" />} />
                 <Route path="/home" element={<Home />} />
-                <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/about-us" element={<Navigate replace to="/meet-the-team" />} />
+                <Route path="/meet-the-team" element={<MeetTheTeam />} />
                 <Route path="/meet-the-leads" element={<MeetTheLeadsPage />} />
                 <Route path="/meet-the-mentors" element={<MeetTheMentorsPage />} />
+                <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
