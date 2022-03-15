@@ -1,35 +1,45 @@
 .page-meet-the-leads main {
 	
-	.text-image-box .text-box {
+	.text-image-box {
 		
-		.lead-header {
+		.text-box {
 			
-			display: flex;
-			align-items: baseline;
-			justify-content: center;
-			flex-wrap: wrap;
-			margin-bottom: 5px;
-			
-			h4, h6 {
+			.lead-header {
 				
-				padding: 0 5px;
-				white-space: nowrap;
+				display: flex;
+				align-items: baseline;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-bottom: 5px;
+				
+				h4, h6 {
+					
+					padding: 0 5px;
+					white-space: nowrap;
+					
+				}
+				
+				h4 {
+					
+					font-size: 1.6em;
+					
+				}
+				
+				h6 {
+					
+					font-size: 1em;
+					opacity: 0.8;
+					font-weight: normal;
+					
+				}
 				
 			}
 			
-			h4 {
-				
-				font-size: 1.6em;
-				
-			}
+		}
+		
+		&.ian-elder .image-box img {
 			
-			h6 {
-				
-				font-size: 1em;
-				opacity: 0.8;
-				font-weight: normal;
-				
-			}
+			object-position: center 10%;
 			
 		}
 		
