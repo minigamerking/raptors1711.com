@@ -9,6 +9,7 @@ import { Page } from "../elements/page-flow/page";
 import { Props, State } from "./home";
 import { PageHeading } from "../elements/page-heading";
 import { TextImageBox } from "../elements/text-image-box";
+import { sanitizeStringToID } from "../../util/sanitize-string-to-id";
 
 type LeadProfile = {
 	name: string,
@@ -84,7 +85,8 @@ export class MeetTheLeadsPage extends React.Component<Props, State> {
 			leads.push(
 				<TextImageBox image={lead.image}
 							  imageAlt={lead.name}
-							  reverse={reversed = !reversed}>
+							  reverse={reversed = !reversed}
+							  className={sanitizeStringToID(lead.name)}>
 					<div className="lead-header">
 						<h4>{lead.name}</h4>
 						<h6>{lead.title}</h6>
