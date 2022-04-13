@@ -9,6 +9,7 @@ import { NotFound } from "./react/pages/not-found";
 import { ContactUs } from "./react/pages/contact-us";
 import { MeetTheLeadsPage } from "./react/pages/meet-the-leads-page";
 import { MeetTheMentorsPage } from "./react/pages/meet-the-mentors-page";
+import { SponsorUs } from "./react/pages/sponsor-us";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
                 <Route path="/meet-the-team" element={<MeetTheTeam />} />
                 <Route path="/meet-the-leads" element={<MeetTheLeadsPage />} />
                 <Route path="/meet-the-mentors" element={<MeetTheMentorsPage />} />
+                <Route path="/sponsorship" element={<SponsorUs />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
