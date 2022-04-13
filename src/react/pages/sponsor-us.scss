@@ -1,0 +1,49 @@
+.page-sponsor-us main {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	img {
+		
+		max-width: 80%;
+		border: 5px solid transparent;
+		outline: 2px solid white;
+		margin-bottom: 30px;
+		
+	}
+	
+	p {
+		
+		text-align: center;
+		font-size: 1.1rem;
+		margin-bottom: 15px;
+		
+		span {
+			
+			text-decoration: underline;
+			
+			&:before, &:after {
+				
+				content: "\"";
+				
+			}
+			
+		}
+		
+	}
+	
+	a {
+		
+		text-decoration: none;
+		background: var(--color-first-blue);
+		font-weight: bold;
+		font-size: 1.3rem;
+		padding: 12px 50px;
+		color: white;
+		border-radius: 6px;
+		border: 2px solid white;
+		
+	}
+	
+}
