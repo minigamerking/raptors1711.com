@@ -38,7 +38,7 @@ export class Header extends React.Component<Props, State> {
 				"Meet the Leads": "/meet-the-leads",
 				"Meet the Mentors": "/meet-the-mentors",
 			},
-			"Sponsor Us": "/sponsorship",
+			"Sponsor/Donate": "/sponsorship",
 			"Contact Us": "/contact-us"
 		};
 		
