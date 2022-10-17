@@ -1,0 +1,19 @@
+# Ignore JetBrains IDE meta-files.
+/.idea/
+
+# Ignore NPM `node_modules` package directory/files.
+/node_modules/
+
+# Ignore NPM's lock file. I don't think I'm supposed to be doing this.
+/package-lock.json
+
+# Ignore certain NextJS specific files.
+/.next/
+/out/
+next-env.d.ts
+
+# Ignore the output/build folder.
+/build
+
+# Ignore Vercel meta files.
+.vercel
