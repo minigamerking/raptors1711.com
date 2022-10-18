@@ -18,6 +18,10 @@ const NEXT_CONFIG = {
 	
 	images: {
 		
+		domains: [
+			"raptors1711.nyc3.digitaloceanspaces.com",
+		],
+		
 		formats: [
 			"image/avif",
 			"image/webp",
