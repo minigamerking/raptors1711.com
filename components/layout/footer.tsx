@@ -4,12 +4,12 @@
  * Project: v2.raptors1711.com
  */
 
-import type { NextPage } from 'next';
+import { ReactElement } from "react";
 
-const Home: NextPage = () => (
-	<div>
-		<p>Hello, world!</p>
-	</div>
-);
-
-export default Home;
+export default function Footer(): ReactElement {
+	
+	return (
+		<footer/>
+	);
+	
+}

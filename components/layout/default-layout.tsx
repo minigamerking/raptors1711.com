@@ -1,8 +1,7 @@
 /*
- * Created by Formative Solutions <contact@formativesolutions.io>
- *     (https://formativesolutions.io/).
- * <project_creation_date>
- * Project: <project_name>
+ * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
+ * 9:19 AM -- October 17th, 2022
+ * Project: v2.raptors1711.com
  */
 
 import { ReactElement, ReactNode } from "react";
