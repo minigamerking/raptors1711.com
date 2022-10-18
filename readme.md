@@ -1,9 +1,6 @@
-# Formative Solutions Website Template
+# Official Website for FRC Team 1711 - The Raptors
 
-This is a template for all new Formative Solutions websites, built on NextJS.
-This repository is a heavily modified version of the default project generated
-using the popular [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
-tool.
+Find it live, here: [https://raptors1711.com/](https://raptors1711.com/)
 
 ## Running the site locally
 
@@ -15,5 +12,5 @@ server can be started locally using the following command:
 npm run dev
 ```
 
-You can then open [http://localhost:3000](http://localhost:3000) with your
+You can then open [http://localhost:1711](http://localhost:1711) with your
 browser to see the result.
