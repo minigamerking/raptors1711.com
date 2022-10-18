@@ -13,7 +13,11 @@ const Document: () => ReactElement = (): ReactElement => (
 		<Head>
 			<link
 				rel="stylesheet"
-				href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap"
+				href="/fonts/spy-agency.css"
+			/>
+			<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
 			/>
 		</Head>
 		<body>
