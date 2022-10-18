@@ -14,7 +14,8 @@ import {
  */
 export type Color =
 	| "BLACK"
-	| "WHITE";
+	| "WHITE"
+	| "BLUEGRAY";
 
 /**
  * A mapping from color names to their raw values (using acceptable CSS color
@@ -23,6 +24,7 @@ export type Color =
 export const RAW_COLORS: ColorMap<Color> = {
 	BLACK: "#3C3C3C",
 	WHITE: "#FFF",
+	BLUEGRAY: "#282C34",
 };
 
 /**
