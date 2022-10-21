@@ -27,7 +27,7 @@ const breakpoint: string = "@media(max-width: 700px)";
 const outerContainerStyles: SerializedStyles = css({
 	display: "flex",
 	flexDirection: "row",
-	margin: "25px 0",
+	margin: "15px 0",
 	backgroundColor: "#FFF1",
 	borderRadius: "5px",
 	overflow: "hidden",
