@@ -10,6 +10,7 @@ import { ParsedUrlQuery } from "querystring";
 import BioListing from "../../../components/bio-listing";
 import PageTitle from "../../../components/page-title";
 import { LEADS } from "../../../data/leads";
+import Head from "next/head";
 
 const MeetTheLeadsByYearPage: NextPage = () => {
 	
@@ -18,6 +19,10 @@ const MeetTheLeadsByYearPage: NextPage = () => {
 	
 	return (
 		<>
+			<Head>
+				<title>Meet the {year} Leads | Raptor Robotics</title>
+				<meta name="description" content="" />
+			</Head>
 			<PageTitle>Meet the Leads</PageTitle>
 			<BioListing allBios={LEADS} year={parseInt(year as string)} />
 		</>

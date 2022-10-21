@@ -8,6 +8,7 @@ import { NextPage } from "next";
 import BioListing from "../../../components/bio-listing";
 import { MENTORS } from "../../../data/mentors";
 import PageTitle from "../../../components/page-title";
+import Head from "next/head";
 
 const MeetTheMentorsPage: NextPage = () => {
 	
@@ -17,6 +18,10 @@ const MeetTheMentorsPage: NextPage = () => {
 	
 	return (
 		<>
+			<Head>
+				<title>Meet the Mentors | Raptor Robotics</title>
+				<meta name="description" content="" />
+			</Head>
 			<PageTitle>Meet the Mentors</PageTitle>
 			<BioListing allBios={MENTORS} year={year} />
 		</>
