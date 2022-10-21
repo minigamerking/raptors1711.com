@@ -6,9 +6,9 @@
 
 export const PAGE_WIDTH: string = "1000px";
 
-export const PAGE_MARGIN_TOP: string = "36px";
+export const PAGE_MARGIN_TOP: string = "8px";
 export const PAGE_MARGIN_SIDES: string = "24px";
 export const PAGE_MARGIN_BOTTOM: string = "24px";
 
-export const PAGE_PADDING_HEADER: string = "36px";
+export const PAGE_PADDING_HEADER: string = "18px";
 export const PAGE_PADDING_FOOTER: string = "36px";
