@@ -7,8 +7,13 @@
 import { ReactElement, ReactNode } from "react";
 import { css, SerializedStyles } from "@emotion/react";
 import { flexContainer } from "../../styles/mixins";
-import { PAGE_MARGIN_SIDES, PAGE_MARGIN_TOP } from "../../styles/sizing";
+import {
+	PAGE_MARGIN_SIDES,
+	PAGE_MARGIN_TOP,
+	PAGE_PADDING_HEADER, PAGE_WIDTH
+} from "../../styles/sizing";
 import Link from "next/link";
+import RaptorRobotics from "../raptor-robotics";
 
 type Navigation = Record<string, {
 	href?: string,
@@ -34,20 +39,33 @@ const navigation: Navigation = {
 	},
 };
 
+const headerContainerStyles: SerializedStyles = css({
+	...flexContainer(),
+	width: "100%",
+	paddingTop: PAGE_MARGIN_TOP,
+	paddingLeft: PAGE_MARGIN_SIDES,
+	paddingRight: PAGE_MARGIN_SIDES,
+	paddingBottom: PAGE_PADDING_HEADER,
+});
+
+const headerStyles: SerializedStyles = css({
+	...flexContainer({ direction: "row", mainAxis: "center" }),
+	maxWidth: PAGE_WIDTH,
+	width: "100%",
+});
+
+const flexBalloonStyles: SerializedStyles = css({
+	flex: 1,
+})
+
 const navStyles: SerializedStyles = css({
 	...flexContainer({ direction: "row", mainAxis: "center" }),
 });
 
 const navItemStyles: SerializedStyles = css({
-	padding: "10px",
-});
-
-const headerContainerStyles: SerializedStyles = css({
-	...flexContainer(),
-	width: "100%",
-	paddingLeft: PAGE_MARGIN_SIDES,
-	paddingRight: PAGE_MARGIN_SIDES,
-	paddingBottom: PAGE_MARGIN_TOP,
+	fontSize: "1.05em",
+	padding: "10px 15px",
+	textDecoration: "none",
 });
 
 export default function Header(): ReactElement {
@@ -65,7 +83,9 @@ export default function Header(): ReactElement {
 	
 	return (
 		<div css={headerContainerStyles}>
-			<header>
+			<header css={headerStyles}>
+				<RaptorRobotics />
+				<div css={flexBalloonStyles} />
 				<nav css={navStyles}>
 					{navLinks}
 				</nav>
