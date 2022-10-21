@@ -12,8 +12,9 @@ export type Props = Readonly<{
 	children: string,
 }>;
 
-const textiles: SerializedStyles = css({
+const textStyles: SerializedStyles = css({
 	fontSize: "4em",
+	lineHeight: "0.9",
 	textShadow: "4px 3px grey",
 	textAlign: "center",
 	margin: "20px 0",
@@ -21,6 +22,6 @@ const textiles: SerializedStyles = css({
 
 export default function PageTitle({ children }: Props): ReactElement {
 	
-	return <h1 css={textiles}>{children}</h1>;
+	return <h1 css={textStyles}>{children}</h1>;
 	
 }
