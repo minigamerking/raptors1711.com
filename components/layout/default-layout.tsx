@@ -41,7 +41,7 @@ const mainStyles: SerializedStyles = css({
 const DefaultLayout: GetLayoutFunction = (
 	element: ReactElement
 ): ReactNode => (
-	<div className="page-root">
+	<>
 		<div css={headerAndMainStyles}>
 			<Header />
 			<div css={mainContainerStyles}>
@@ -49,7 +49,7 @@ const DefaultLayout: GetLayoutFunction = (
 			</div>
 		</div>
 		<Footer />
-	</div>
+	</>
 );
 
 export default DefaultLayout;
