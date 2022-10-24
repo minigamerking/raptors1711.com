@@ -18,7 +18,7 @@ import { flexContainer } from "../../styles/mixins";
 
 const headerAndMainStyles: SerializedStyles = css({
 	...flexContainer({ mainAxis: "start" }),
-	minHeight: "100vh",
+	minHeight: `calc(100vh - ${PAGE_PADDING_FOOTER})`,
 	width: "100%",
 });
 
@@ -35,7 +35,6 @@ const mainStyles: SerializedStyles = css({
 	...flexContainer({ mainAxis: "start", crossAxis: "stretch" }),
 	width: "100%",
 	maxWidth: PAGE_WIDTH,
-	paddingBottom: PAGE_PADDING_FOOTER,
 });
 
 const DefaultLayout: GetLayoutFunction = (
