@@ -14,30 +14,7 @@ import {
 } from "../../styles/sizing";
 import Link from "next/link";
 import RaptorRobotics from "../raptor-robotics";
-
-type Navigation = Record<string, {
-	href?: string,
-	children?: Navigation,
-}>;
-
-const navigation: Navigation = {
-	"Home": {
-		href: "/"
-	},
-	"Meet the Team": {
-		href: "/meet-the-team",
-		children: {
-			"Meet the Leads": { href: "/meet-the-team/leads" },
-			"Meet the Mentors": { href: "/meet-the-team/mentors" },
-		}
-	},
-	"Sponsor/Donate": {
-		href: "/sponsorship"
-	},
-	"Contact Us": {
-		href: "/contact-us"
-	},
-};
+import { HEADER_NAVIGATION, Navigation } from "../../data/navigation";
 
 const headerContainerStyles: SerializedStyles = css({
 	...flexContainer(),
@@ -70,7 +47,7 @@ const navItemStyles: SerializedStyles = css({
 
 export default function Header(): ReactElement {
 	
-	const navLinks: ReactNode = Object.entries(navigation).map(
+	const navLinks: ReactNode = Object.entries(HEADER_NAVIGATION).map(
 		([linkTitle, { href }]: [string, { href?: string, children?: Navigation }]): ReactNode => (
 			<Link href={href as string}
 				  title={linkTitle}
