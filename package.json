@@ -16,7 +16,8 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@formativesolutions/next": "^1.0.1",
-    "@formativesolutions/colors": "^1.0.1"
+    "@formativesolutions/colors": "^1.0.1",
+    "@svgr/webpack": "^6.5.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",
