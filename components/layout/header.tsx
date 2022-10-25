@@ -48,7 +48,8 @@ const navItemStyles: SerializedStyles = css({
 export default function Header(): ReactElement {
 	
 	const navLinks: ReactNode = Object.entries(HEADER_NAVIGATION).map(
-		([linkTitle, { href }]: [string, { href?: string, children?: Navigation }]): ReactNode => (
+		([linkTitle, { href, children }]:
+			 [string, { href?: string, children?: Navigation }]): ReactNode => (
 			<Link href={href as string}
 				  title={linkTitle}
 				  key={linkTitle}
