@@ -13,6 +13,8 @@ import {
 	PAGE_WIDTH
 } from "../../styles/sizing";
 import FRCLogoHorizontalRule from "../frc-logo-horizontal-rule";
+import { FOOTER_NAVIGATION } from "../../data/navigation";
+import FooterNavigation from "../footer-navigation";
 
 const footerContainerStyles: SerializedStyles = css({
 	...flexContainer({ crossAxis: "center" }),
@@ -27,8 +29,11 @@ const footerStyles: SerializedStyles = css({
 	...flexContainer(),
 	maxWidth: PAGE_WIDTH,
 	width: "100%",
-	height: "30px",
-	backgroundColor: "red",
+});
+
+const footerNavContainer: SerializedStyles = css({
+	width: "100%",
+	maxWidth: "800px",
 });
 
 export default function Footer(): ReactElement {
@@ -37,7 +42,9 @@ export default function Footer(): ReactElement {
 		<div css={footerContainerStyles}>
 			<FRCLogoHorizontalRule />
 			<footer css={footerStyles}>
-				
+				<div css={footerNavContainer}>
+					<FooterNavigation navigation={FOOTER_NAVIGATION} />
+				</div>
 			</footer>
 		</div>
 	);
