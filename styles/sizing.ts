@@ -4,7 +4,7 @@
  * Project: v2.raptors1711.com
  */
 
-export const PAGE_WIDTH: string = "1000px";
+export const PAGE_WIDTH: string = "1200px";
 
 export const PAGE_MARGIN_TOP: string = "8px";
 export const PAGE_MARGIN_SIDES: string = "24px";
