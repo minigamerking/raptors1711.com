@@ -15,6 +15,8 @@ import {
 import FRCLogoHorizontalRule from "../frc-logo-horizontal-rule";
 import { FOOTER_NAVIGATION } from "../../data/navigation";
 import FooterNavigation from "../footer-navigation";
+import SocialMediaCallout from "../social-media-callout";
+import { ALL_SOCIAL_MEDIA } from "../../data/social-media";
 
 const footerContainerStyles: SerializedStyles = css({
 	...flexContainer({ crossAxis: "center" }),
@@ -45,6 +47,8 @@ export default function Footer(): ReactElement {
 				<div css={footerNavContainer}>
 					<FooterNavigation navigation={FOOTER_NAVIGATION} />
 				</div>
+				<SocialMediaCallout socialMedias={ALL_SOCIAL_MEDIA}
+									orientation="horizontal" />
 			</footer>
 		</div>
 	);
