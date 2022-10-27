@@ -15,7 +15,7 @@ const textStyles: SerializedStyles = css({
 
 const lineBreakStyles: SerializedStyles = css({
 	fontSize: 0,
-})
+});
 
 export default function RaptorRobotics(): ReactElement {
 	

@@ -50,7 +50,7 @@ const innerTextContainerStyles: SerializedStyles = css({
 	"*": {
 		fontFamily: "'PT Sans', sans-serif",
 	},
-})
+});
 
 const imageContainerStyles: SerializedStyles = css({
 	flex: "3 1",
@@ -116,14 +116,14 @@ export default function ContextBox({
 		textContainerStyles,
 		css({
 			flexGrow: 1 - imageProportion,
-		})
+		}),
 	];
 	
 	const allImageContainerStyles: SerializedStyles[] = [
 		imageContainerStyles,
 		css({
 			flexGrow: imageProportion,
-		})
+		}),
 	];
 	
 	const allInnerTextContainerStyles: SerializedStyles[] = [

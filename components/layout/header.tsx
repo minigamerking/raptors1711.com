@@ -33,7 +33,7 @@ const headerStyles: SerializedStyles = css({
 
 const flexBalloonStyles: SerializedStyles = css({
 	flex: 1,
-})
+});
 
 const navStyles: SerializedStyles = css({
 	...flexContainer({ direction: "row", mainAxis: "center" }),
