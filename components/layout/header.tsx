@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import RaptorRobotics from "../raptor-robotics";
 import { HEADER_NAVIGATION, Navigation } from "../../data/navigation";
+import HeaderNavigation from "../header-navigation";
 
 const headerContainerStyles: SerializedStyles = css({
 	...flexContainer(),
@@ -26,47 +27,28 @@ const headerContainerStyles: SerializedStyles = css({
 });
 
 const headerStyles: SerializedStyles = css({
-	...flexContainer({ direction: "row", mainAxis: "center" }),
+	...flexContainer({
+		direction: "column",
+		mainAxis: "center",
+		crossAxis: "stretch",
+	}),
 	maxWidth: PAGE_WIDTH,
 	width: "100%",
 });
 
-const flexBalloonStyles: SerializedStyles = css({
-	flex: 1,
-});
-
-const navStyles: SerializedStyles = css({
-	...flexContainer({ direction: "row", mainAxis: "center" }),
-});
-
-const navItemStyles: SerializedStyles = css({
-	fontSize: "1.05em",
-	padding: "10px 15px",
-	textDecoration: "none",
+const preHeaderContainerStyles: SerializedStyles = css({
+	
 });
 
 export default function Header(): ReactElement {
 	
-	const navLinks: ReactNode = Object.entries(HEADER_NAVIGATION).map(
-		([linkTitle, { href, children }]:
-			 [string, { href?: string, children?: Navigation }]): ReactNode => (
-			<Link href={href as string}
-				  title={linkTitle}
-				  key={linkTitle}
-				  passHref>
-				<a css={navItemStyles}>{linkTitle}</a>
-			</Link>
-		)
-	);
-	
 	return (
 		<div css={headerContainerStyles}>
 			<header css={headerStyles}>
-				<RaptorRobotics />
-				<div css={flexBalloonStyles} />
-				<nav css={navStyles}>
-					{navLinks}
-				</nav>
+				<div css={preHeaderContainerStyles}>
+					<RaptorRobotics />
+				</div>
+				<HeaderNavigation navigation={HEADER_NAVIGATION} />
 			</header>
 		</div>
 	);
