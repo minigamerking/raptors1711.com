@@ -4,11 +4,26 @@
  * Project: v2.raptors1711.com
  */
 
-import { ReactElement } from "react";
+import { MouseEventHandler, ReactElement } from "react";
 import { css, SerializedStyles } from "@emotion/react";
 import { flexContainer } from "../styles/mixins";
 
-export type Props = Readonly<{}>;
+export type ButtonProps = Readonly<{
+	onClick?: MouseEventHandler<HTMLDivElement> | undefined,
+}>;
+
+export type LinkProps = Readonly<{
+	href?: string,
+	useNextLink?: boolean,
+	target?: "_blank" | "_parent" | "_self" | "_top",
+	noopener?: boolean,
+	noreferrer?: boolean,
+	nofollow?: boolean,
+}>;
+
+export type Props = Readonly<{
+	children?: string,
+}> & (ButtonProps | LinkProps);
 
 const containerStyles: SerializedStyles = css({
 	...flexContainer({ direction: "row", mainAxis: "center", crossAxis: "center" }),
@@ -17,27 +32,27 @@ const containerStyles: SerializedStyles = css({
 	margin: "16px 0",
 });
 
-const hrStyles: SerializedStyles = css({
-	flex: "1",
-	height: "1px",
-	backgroundColor: "grey",
-});
-
-const frcLogoStyles: SerializedStyles = css({
-	height: "100%",
-	margin: "0 0.5rem",
-});
-
-export default function CTAButton({}: Props): ReactElement {
+export default function CTAButton({
+	children, ...rest
+}: Props): ReactElement {
 	
-	return (
-		<div css={containerStyles}>
-			<hr css={hrStyles}/>
-			<img src="https://raptors1711.nyc3.digitaloceanspaces.com/frc-logo.png"
-				 alt=""
-				 css={frcLogoStyles} />
-			<hr css={hrStyles}/>
+	let result: ReactElement = (
+		<div css={containerStyles}
+			 onClick={"onClick" in rest ? rest.onClick : undefined}>
+			{children}
 		</div>
 	);
+	
+	if ("href" in rest) {
+		
+		result = (
+			<a href={rest.href} target="_blank" rel="noreferrer">
+				{result}
+			</a>
+		);
+		
+	}
+	
+	return result;
 	
 }
