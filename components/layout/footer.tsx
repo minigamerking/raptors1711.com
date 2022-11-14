@@ -31,6 +31,7 @@ const footerStyles: SerializedStyles = css({
 	...flexContainer(),
 	maxWidth: PAGE_WIDTH,
 	width: "100%",
+	marginTop: "16px",
 });
 
 const footerNavContainer: SerializedStyles = css({

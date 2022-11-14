@@ -13,7 +13,6 @@ const containerStyles: SerializedStyles = css({
 	...flexContainer({ direction: "row", mainAxis: "center", crossAxis: "center" }),
 	height: "1.5rem",
 	width: "100%",
-	margin: "16px 0",
 });
 
 const hrStyles: SerializedStyles = css({
