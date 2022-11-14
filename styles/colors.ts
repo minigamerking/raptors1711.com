@@ -7,7 +7,7 @@
 import {
 	ColorMap,
 	createColorToCSSVariableNameMap
-} from "@formativesolutions/colors";
+} from "@formativesolutions/styles";
 
 /**
  * A union of utilized color names.

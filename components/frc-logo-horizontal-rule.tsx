@@ -7,7 +7,7 @@
 
 import { ReactElement } from "react";
 import { css, SerializedStyles } from "@emotion/react";
-import { flexContainer } from "../styles/mixins";
+import { flexContainer } from "@formativesolutions/styles";
 
 const containerStyles: SerializedStyles = css({
 	...flexContainer({ direction: "row", mainAxis: "center", crossAxis: "center" }),

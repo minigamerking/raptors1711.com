@@ -6,7 +6,7 @@
 
 import { ReactElement } from "react";
 import { css, SerializedStyles } from "@emotion/react";
-import { flexContainer } from "../../styles/mixins";
+import { flexContainer } from "@formativesolutions/styles";
 import {
 	PAGE_MARGIN_BOTTOM,
 	PAGE_MARGIN_SIDES, PAGE_PADDING_FOOTER,

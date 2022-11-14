@@ -9,7 +9,7 @@ import { ReactElement, ReactNode } from "react";
 import { css, SerializedStyles } from "@emotion/react";
 import { Navigation } from "../data/navigation";
 import Link from "next/link";
-import { flexContainer } from "../styles/mixins";
+import { flexContainer } from "@formativesolutions/styles";
 
 export type Props = Readonly<{
 	navigation: Navigation,

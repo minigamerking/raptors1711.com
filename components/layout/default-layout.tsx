@@ -14,7 +14,7 @@ import {
 	PAGE_PADDING_FOOTER,
 	PAGE_WIDTH
 } from "../../styles/sizing";
-import { flexContainer } from "../../styles/mixins";
+import { flexContainer } from "@formativesolutions/styles";
 
 const headerAndMainStyles: SerializedStyles = css({
 	...flexContainer({ mainAxis: "start" }),

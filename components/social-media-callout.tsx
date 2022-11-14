@@ -7,7 +7,7 @@
 import { ReactElement, ReactNode } from "react";
 import { css, SerializedStyles } from "@emotion/react";
 import { SocialMedia } from "../data/social-media";
-import { flexContainer } from "../styles/mixins";
+import { flexContainer } from "@formativesolutions/styles";
 
 export type Props = Readonly<{
 	socialMedias: SocialMedia[],

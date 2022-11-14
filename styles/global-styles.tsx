@@ -9,9 +9,9 @@ import {
 	ReactElement
 } from "react";
 import { Global, css, SerializedStyles } from "@emotion/react";
-import { generateColorDefinitionsCSSObject } from "@formativesolutions/colors";
+import { generateColorDefinitionsCSSObject } from "@formativesolutions/styles";
 import { COLORS, RAW_COLORS } from "./colors";
-import { flexContainer } from "./mixins";
+import { flexContainer } from "@formativesolutions/styles";
 
 const COLOR_VARIABLE_DEFINITIONS: Record<string, string> =
 	generateColorDefinitionsCSSObject(RAW_COLORS);

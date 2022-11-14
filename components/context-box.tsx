@@ -8,7 +8,7 @@ import { ReactElement, ReactNode } from "react";
 import { css, SerializedStyles } from "@emotion/react";
 import Image, { StaticImageData } from "next/future/image";
 import { PAGE_WIDTH } from "../styles/sizing";
-import { flexContainer } from "../styles/mixins";
+import { flexContainer } from "@formativesolutions/styles";
 
 export type Props = Readonly<{
 	children?: ReactNode,
