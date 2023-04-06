@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
  * 3:56 PM -- October 25th, 2022
- * Project: v2.raptors1711.com
+ * Project: @frc1711/raptors1711.com
  */
 
 import { ReactNode } from "react";

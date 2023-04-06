@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
  * 9:21 AM -- October 18th, 2022
- * Project: v2.raptors1711.com
+ * Project: @frc1711/raptors1711.com
  */
 
 import { NextPage } from "next";
