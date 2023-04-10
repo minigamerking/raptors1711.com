@@ -1,0 +1,52 @@
+/*
+ * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
+ * 9:45 AM -- April 8th, 2023
+ * Project: @frc1711/raptors1711.com
+ */
+
+.container {
+	
+	list-style: none;
+	
+	&.outerContainer {
+		
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		margin: -10px -30px;
+		
+		& > li {
+			
+			margin: 10px 30px;
+			
+		}
+		
+	}
+	
+	&.innerContainer {
+		
+		margin-left: 14px;
+		
+	}
+	
+	.navItem {
+		
+		.navText {
+			
+			&.link {
+				
+				text-decoration: none;
+				
+			}
+			
+			&.nonLink {
+				
+				
+				
+			}
+			
+		}
+		
+	}
+	
+}

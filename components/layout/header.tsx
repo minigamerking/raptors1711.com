@@ -4,53 +4,21 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { ReactElement, ReactNode } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-import { flexContainer } from "../../styles/mixins";
-import {
-	PAGE_MARGIN_SIDES,
-	PAGE_MARGIN_TOP,
-	PAGE_PADDING_HEADER, PAGE_WIDTH
-} from "../../styles/sizing";
-import Link from "next/link";
+import styles from "./header.module.scss";
+import type { FunctionComponent, ReactElement } from "react";
 import RaptorRobotics from "../raptor-robotics";
-import { HEADER_NAVIGATION, Navigation } from "../../data/navigation";
 import HeaderNavigation from "../header-navigation";
+import { HEADER_NAVIGATION } from "../../data/navigation";
 
-const headerContainerStyles: SerializedStyles = css({
-	...flexContainer(),
-	width: "100%",
-	paddingTop: PAGE_MARGIN_TOP,
-	paddingLeft: PAGE_MARGIN_SIDES,
-	paddingRight: PAGE_MARGIN_SIDES,
-	paddingBottom: PAGE_PADDING_HEADER,
-});
+const Header: FunctionComponent = (): ReactElement => (
+	<div className={styles.headerContainer}>
+		<header className={styles.header}>
+			<div className={styles.preHeaderContainer}>
+				<RaptorRobotics />
+			</div>
+			<HeaderNavigation navigation={HEADER_NAVIGATION} />
+		</header>
+	</div>
+);
 
-const headerStyles: SerializedStyles = css({
-	...flexContainer({
-		direction: "column",
-		mainAxis: "center",
-		crossAxis: "stretch",
-	}),
-	maxWidth: PAGE_WIDTH,
-	width: "100%",
-});
-
-const preHeaderContainerStyles: SerializedStyles = css({
-	
-});
-
-export default function Header(): ReactElement {
-	
-	return (
-		<div css={headerContainerStyles}>
-			<header css={headerStyles}>
-				<div css={preHeaderContainerStyles}>
-					<RaptorRobotics />
-				</div>
-				<HeaderNavigation navigation={HEADER_NAVIGATION} />
-			</header>
-		</div>
-	);
-	
-}
+export default Header;

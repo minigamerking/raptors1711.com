@@ -4,7 +4,7 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 
 export type Bio = {
 	name: string,
@@ -13,4 +13,4 @@ export type Bio = {
 	image: string | StaticImageData,
 	imageVerticalCenter?: number,
 	imageHorizontalCenter?: number,
-}
+};

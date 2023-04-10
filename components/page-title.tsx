@@ -4,24 +4,15 @@
  * Project: @frc1711/raptors1711.com
  */
 
-
-import { ReactElement } from "react";
-import { css, SerializedStyles } from "@emotion/react";
+import styles from "./page-title.module.scss";
+import type { FunctionComponent, ReactElement, ReactNode } from "react";
 
 export type Props = Readonly<{
-	children: string,
+	children: ReactNode | undefined,
 }>;
 
-const textStyles: SerializedStyles = css({
-	fontSize: "4em",
-	lineHeight: "0.9",
-	textShadow: "4px 3px grey",
-	textAlign: "center",
-	margin: "20px 0",
-});
+const PageTitle: FunctionComponent<Props> =
+	({ children }: Props): ReactElement =>
+		<h1 className={styles.text}>{children}</h1>;
 
-export default function PageTitle({ children }: Props): ReactElement {
-	
-	return <h1 css={textStyles}>{children}</h1>;
-	
-}
+export default PageTitle;

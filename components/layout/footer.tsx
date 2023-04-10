@@ -4,53 +4,25 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { ReactElement } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-import { flexContainer } from "../../styles/mixins";
-import {
-	PAGE_MARGIN_BOTTOM,
-	PAGE_MARGIN_SIDES, PAGE_PADDING_FOOTER,
-	PAGE_WIDTH
-} from "../../styles/sizing";
+import styles from "./footer.module.scss";
+import type { FunctionComponent, ReactElement } from "react";
 import FRCLogoHorizontalRule from "../frc-logo-horizontal-rule";
-import { FOOTER_NAVIGATION } from "../../data/navigation";
 import FooterNavigation from "../footer-navigation";
 import SocialMediaCallout from "../social-media-callout";
+import { FOOTER_NAVIGATION } from "../../data/navigation";
 import { ALL_SOCIAL_MEDIA } from "../../data/social-media";
 
-const footerContainerStyles: SerializedStyles = css({
-	...flexContainer({ crossAxis: "center" }),
-	width: "100%",
-	paddingTop: PAGE_PADDING_FOOTER,
-	paddingLeft: PAGE_MARGIN_SIDES,
-	paddingRight: PAGE_MARGIN_SIDES,
-	paddingBottom: PAGE_MARGIN_BOTTOM,
-});
+const Footer: FunctionComponent = (): ReactElement => (
+	<div className={styles.footerContainer}>
+		<FRCLogoHorizontalRule />
+		<footer className={styles.footer}>
+			<div className={styles.footerNav}>
+				<FooterNavigation navigation={FOOTER_NAVIGATION} />
+			</div>
+			<SocialMediaCallout socialMedias={ALL_SOCIAL_MEDIA}
+								orientation="horizontal" />
+		</footer>
+	</div>
+);
 
-const footerStyles: SerializedStyles = css({
-	...flexContainer(),
-	maxWidth: PAGE_WIDTH,
-	width: "100%",
-});
-
-const footerNavContainer: SerializedStyles = css({
-	width: "100%",
-	maxWidth: "800px",
-});
-
-export default function Footer(): ReactElement {
-	
-	return (
-		<div css={footerContainerStyles}>
-			<FRCLogoHorizontalRule />
-			<footer css={footerStyles}>
-				<div css={footerNavContainer}>
-					<FooterNavigation navigation={FOOTER_NAVIGATION} />
-				</div>
-				<SocialMediaCallout socialMedias={ALL_SOCIAL_MEDIA}
-									orientation="horizontal" />
-			</footer>
-		</div>
-	);
-	
-}
+export default Footer;

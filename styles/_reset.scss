@@ -1,0 +1,37 @@
+/*
+ * Created by Formative Solutions <contact@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 1:46 PM -- April 6th, 2023.
+ * Project: @frc1711/raptors1711.com
+ */
+
+@mixin configure {
+	
+	* {
+		
+		padding: 0;
+		margin: 0;
+		border: none;
+		box-sizing: border-box;
+		
+	}
+	
+	input, textarea {
+		
+		all: inherit;
+		
+	}
+	
+	textarea {
+		
+		white-space: pre-wrap;
+		
+	}
+	
+	a {
+		
+		color: inherit;
+		
+	}
+	
+}

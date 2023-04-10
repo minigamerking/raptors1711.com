@@ -1,0 +1,45 @@
+/*
+ * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
+ * 10:10 AM -- April 8th, 2023
+ * Project: @frc1711/raptors1711.com
+ */
+
+.container {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	.vertical {
+		
+		flex-direction: column;
+		
+	}
+	
+	.horizontal {
+		
+		flex-direction: row;
+		
+	}
+	
+	.iconLink {
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		padding: 5px;
+		transition: transform 250ms ease-in-out;
+		will-change: transform;
+		backface-visibility: hidden;
+		transform: perspective(1px) translateZ(0);
+		
+		&:hover {
+			
+			transform: scale(1.2);
+			
+		}
+		
+	}
+	
+}

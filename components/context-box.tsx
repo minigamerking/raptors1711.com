@@ -4,11 +4,10 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { ReactElement, ReactNode } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-import Image, { StaticImageData } from "next/future/image";
-import { PAGE_WIDTH } from "../styles/sizing";
-import { flexContainer } from "../styles/mixins";
+import styles from "./context-box.module.scss";
+import type { FunctionComponent, ReactElement, ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
+import type { Properties } from "csstype";
 
 export type Props = Readonly<{
 	children?: ReactNode,
@@ -22,138 +21,77 @@ export type Props = Readonly<{
 	centerChildren?: boolean,
 }>;
 
-const breakpoint: string = "@media(max-width: 700px)";
-
-const outerContainerStyles: SerializedStyles = css({
-	display: "flex",
-	flexDirection: "row",
-	margin: "15px 0",
-	backgroundColor: "#FFF1",
-	borderRadius: "5px",
-	overflow: "hidden",
-	[breakpoint]: {
-		flexDirection: "column",
-	}
-});
-
-const textContainerStyles: SerializedStyles = css({
-	flex: "2 1",
-	...flexContainer({ mainAxis: "stretch" }),
-	[breakpoint]: {
-		order: "2",
-	},
-});
-
-const innerTextContainerStyles: SerializedStyles = css({
-	flex: "1 1",
-	margin: "20px",
-	"*": {
-		fontFamily: "'PT Sans', sans-serif",
-	},
-});
-
-const imageContainerStyles: SerializedStyles = css({
-	flex: "3 1",
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "center",
-	alignItems: "center",
-	maxHeight: "50vh",
-	aspectRatio: "4/3",
-	overflow: "hidden",
-	[breakpoint]: {
-		order: "1",
-	},
-});
-
-const imageStyles: SerializedStyles = css({
-	height: "100%",
-	width: "100%",
-	objectFit: "cover",
-});
-
-export default function ContextBox({
-	children, imageProportion, imageSrc, imageAlt, imageSizes, imageSide,
-	imageVerticalCenter, imageHorizontalCenter, centerChildren
-}: Props): ReactElement {
+function clamp(input: number, minimum: number, maximum: number): number {
 	
-	imageProportion = imageProportion ?? 0.6;
-	
-	imageSizes = imageSizes ??
-		`(max-width: ${PAGE_WIDTH}) 100vw, ` +
-		`${imageProportion * parseInt(PAGE_WIDTH)}px`;
-	
-	centerChildren = centerChildren ?? false;
-	
-	const allOuterContainerStyles: SerializedStyles[] = [outerContainerStyles];
-	
-	if (imageSide === "right") {
+	if (minimum > maximum) {
 		
-		allOuterContainerStyles.push(css({
-			flexDirection: "row-reverse",
-		}));
+		throw Error("Cannot clamp value to range [x, y] when x > y.");
 		
-	}
+	} else if (input < minimum) return minimum;
+	else if (input > maximum) return maximum;
+	else return input;
 	
-	const allImageStyles: SerializedStyles[] = [imageStyles];
+}
+
+const ContextBox: FunctionComponent<Props> = ({
+	children,
+	imageProportion = 0.6,
+	imageSrc,
+	imageAlt,
+	imageSizes = `(max-width: var(--sizing-page-width) 100vw, ` +
+	             `calc(${imageProportion} * var(--sizing-page-width))`,
+	imageSide = "left",
+	imageVerticalCenter,
+	imageHorizontalCenter,
+	centerChildren = false,
+}: Props): ReactElement => {
+	
+	const outerContainerClassNames: string[] = [
+		styles.outerContainer,
+		imageSide === "right" ? styles.right : styles.left,
+	];
+	
+	const imageStyles: Properties = {};
 	
 	if (imageVerticalCenter !== undefined ||
 		imageHorizontalCenter !== undefined) {
 		
 		if (imageVerticalCenter === undefined) imageVerticalCenter = 0.5;
-		else if (imageVerticalCenter > 1) imageVerticalCenter = 1;
+		else imageVerticalCenter = clamp(imageVerticalCenter, 0, 1);
 		
 		if (imageHorizontalCenter === undefined) imageHorizontalCenter = 0.5;
-		else if (imageHorizontalCenter > 1) imageHorizontalCenter = 1;
+		else imageHorizontalCenter = clamp(imageHorizontalCenter, 0, 1);
 		
-		allImageStyles.push(css({
-			objectPosition: `${imageHorizontalCenter * 100}% ${imageVerticalCenter * 100}%`
-		}));
-		
-	}
-	
-	const allTextContainerStyles: SerializedStyles[] = [
-		textContainerStyles,
-		css({
-			flexGrow: 1 - imageProportion,
-		}),
-	];
-	
-	const allImageContainerStyles: SerializedStyles[] = [
-		imageContainerStyles,
-		css({
-			flexGrow: imageProportion,
-		}),
-	];
-	
-	const allInnerTextContainerStyles: SerializedStyles[] = [
-		innerTextContainerStyles
-	];
-	
-	if (centerChildren) {
-		
-		allInnerTextContainerStyles.push(css({
-			...flexContainer({ mainAxis: "center" }),
-		}));
+		imageStyles.objectPosition =
+			`${imageHorizontalCenter * 100}% ${imageVerticalCenter * 100}%`;
 		
 	}
+	
+	let innerTextContainerClassNames: string[] = [styles.innerTextContainer];
+	
+	if (centerChildren) innerTextContainerClassNames.push(styles.centered);
 	
 	return (
-		<div css={allOuterContainerStyles}>
-			<div css={allTextContainerStyles}>
-				<div css={allInnerTextContainerStyles}>
+		<div className={outerContainerClassNames.join(" ")}>
+			<div className={styles.textContainer}
+				 style={{ flexGrow: 1 - imageProportion }}>
+				<div className={innerTextContainerClassNames.join(" ")}>
 					{children}
 				</div>
 			</div>
-			<div css={allImageContainerStyles}>
+			<div className={styles.imageContainer}
+				 style={{ flexGrow: imageProportion }}>
 				<Image src={imageSrc}
 					   width={500}
 					   height={500}
 					   alt={imageAlt}
 					   sizes={imageSizes}
-					   css={allImageStyles} />
+					   className={styles.image}
+					   style={imageStyles}/>
 			</div>
 		</div>
 	);
 	
-}
+};
+
+export default ContextBox;

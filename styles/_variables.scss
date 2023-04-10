@@ -1,0 +1,33 @@
+/*
+ * Created by Formative Solutions <contact@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 1:46 PM -- April 6th, 2023.
+ * Project: @frc1711/raptors1711.com
+ */
+
+@use "sass:meta";
+@use "colors";
+@use "fonts";
+@use "sizing";
+
+@mixin moduleToCSSVariables($module_name) {
+	
+	:root {
+		
+		@each $key, $value in meta.module-variables($module_name) {
+			
+			--#{$key}: #{$value};
+			
+		}
+		
+	}
+	
+}
+
+@mixin configure {
+	
+	@include moduleToCSSVariables(colors);
+	@include moduleToCSSVariables(fonts);
+	@include moduleToCSSVariables(sizing);
+	
+}

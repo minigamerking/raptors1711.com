@@ -10,12 +10,6 @@ const NEXT_CONFIG = {
 	
 	swcMinify: true,
 	
-	compiler: {
-		
-		emotion: true,
-		
-	},
-	
 	images: {
 		
 		domains: [
@@ -42,11 +36,7 @@ const NEXT_CONFIG = {
 	
 	experimental: {
 		
-		images: {
-			
-			allowFutureImage: true,
-			
-		},
+		appDir: true,
 		
 	},
 	

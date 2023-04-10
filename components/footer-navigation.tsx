@@ -4,77 +4,41 @@
  * Project: @frc1711/raptors1711.com
  */
 
-
-import { ReactElement, ReactNode } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-import { Navigation } from "../data/navigation";
+import styles from "./footer-navigation.module.scss";
+import type { FunctionComponent, ReactElement, ReactNode } from "react";
 import Link from "next/link";
-import { flexContainer } from "../styles/mixins";
+import type { Navigation } from "../data/navigation";
+import type { RecordEntry } from "../util/record-entry";
 
 export type Props = Readonly<{
 	navigation: Navigation,
 	level?: number,
 }>;
 
-const containerStyles: SerializedStyles = css({
-	listStyle: "none",
-});
-
-const outerContainerStyles: SerializedStyles = css({
-	...flexContainer({ direction: "row", crossAxis: "start" }),
-	margin: "-10px -30px",
-	"& > li": {
-		margin: "10px 30px",
-	}
-});
-
-const innerContainerStyles: SerializedStyles = css({
-	marginLeft: "14px",
-});
-
-const navItemStyles: SerializedStyles = css({
-	
-});
-
-const navTextStyles: SerializedStyles = css({
-	
-});
-
-const linkStyles: SerializedStyles = css({
-	textDecoration: "none",
-});
-
-const nonLinkStyles: SerializedStyles = css({
-	
-});
-
-export default function FooterNavigation({
-	navigation, level
-}: Props): ReactElement {
-	
-	level = level ?? 0;
+const FooterNavigation: FunctionComponent<Props> = (
+	{ navigation, level = 0 }: Props,
+): ReactElement => {
 	
 	const innerContent: ReactNode = Object.entries(navigation).map(
-		([linkTitle, { href, children }]:
-			 [string, { href?: string, children?: Navigation }]): ReactNode => {
+		([text, { href, children }]: RecordEntry<Navigation>): ReactNode => {
 			
 			let linkItemContent: ReactNode[] = [];
 			
 			if (href !== undefined) {
 				
 				linkItemContent.push(
-					<Link key="nav-item-text" href={href} passHref>
-						<a css={[navTextStyles, linkStyles]}>
-							{linkTitle}
-						</a>
+					<Link key="nav-item-text"
+						  href={href}
+						  className={[styles.navText, styles.link].join(" ")}>
+						{text}
 					</Link>
 				);
 				
 			} else {
 				linkItemContent.push(
 					<p key="nav-item-text"
-					   css={[navTextStyles, nonLinkStyles]}>
-						{linkTitle}
+					   className={[styles.navText, styles.nonLink].join(" ")}>
+						{text}
 					</p>
 				);
 			}
@@ -90,7 +54,7 @@ export default function FooterNavigation({
 			}
 			
 			return (
-				<li key={linkTitle} css={navItemStyles}>
+				<li key={text} className={styles.navItem}>
 					{linkItemContent}
 				</li>
 			);
@@ -98,15 +62,17 @@ export default function FooterNavigation({
 		}
 	);
 	
-	const allContainerStyles: SerializedStyles[] = [
-		containerStyles,
-		level <= 0 ? outerContainerStyles : innerContainerStyles
+	const containerClassNames: string[] = [
+		styles.container,
+		level <= 0 ? styles.outerContainer : styles.innerContainer,
 	];
 	
 	return (
-		<ul css={allContainerStyles}>
+		<ul className={containerClassNames.join(" ")}>
 			{innerContent}
 		</ul>
 	);
 	
-}
+};
+
+export default FooterNavigation;

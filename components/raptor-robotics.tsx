@@ -4,26 +4,14 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { ReactElement } from "react";
-import { css, SerializedStyles } from "@emotion/react";
+import styles from "./raptor-robotics.module.scss";
+import type { FunctionComponent, ReactElement } from "react";
 
-const textStyles: SerializedStyles = css({
-	fontSize: "2em",
-	lineHeight: "1",
-	textShadow: "2px 2px #0008",
-});
+const RaptorRobotics: FunctionComponent = (): ReactElement => (
+	<h1 className={styles.text}>
+		Raptor<br className={styles.lineBreak} />
+		Robotics
+	</h1>
+);
 
-const lineBreakStyles: SerializedStyles = css({
-	fontSize: 0,
-});
-
-export default function RaptorRobotics(): ReactElement {
-	
-	return (
-		<h1 css={textStyles}>
-			Raptor<br css={lineBreakStyles} />
-			Robotics
-		</h1>
-	);
-	
-}
+export default RaptorRobotics;

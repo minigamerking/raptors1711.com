@@ -4,19 +4,16 @@
  * Project: @frc1711/raptors1711.com
  */
 
-
-import { ReactElement, ReactNode } from "react";
-import { css, SerializedStyles } from "@emotion/react";
+import styles from "./basic-blog-flow.module.scss";
+import type { FunctionComponent, ReactElement, ReactNode } from "react";
 
 export type Props = Readonly<{
 	children: ReactNode,
 }>;
 
-const containerStyles: SerializedStyles = css({
-	
-});
-
-export default function BasicBlogFlow({ children }: Props): ReactElement {
+const BasicBlogFlow: FunctionComponent<Props> = (
+	{ children }: Props,
+): ReactElement => {
 	
 	console.log(children);
 	
@@ -29,9 +26,11 @@ export default function BasicBlogFlow({ children }: Props): ReactElement {
 	}
 	
 	return (
-		<div css={containerStyles}>
+		<div className={styles.container}>
 			{children}
 		</div>
 	);
 	
-}
+};
+
+export default BasicBlogFlow;

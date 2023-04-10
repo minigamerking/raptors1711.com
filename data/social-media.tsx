@@ -4,7 +4,7 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import InstagramIcon from "../assets/icons/instagram.svg";
 import FacebookIcon from "../assets/icons/facebook.svg";
 import TwitterIcon from "../assets/icons/twitter.svg";

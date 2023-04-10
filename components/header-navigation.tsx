@@ -4,80 +4,40 @@
  * Project: @frc1711/raptors1711.com
  */
 
-
-import { ReactElement, ReactNode } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-import { Navigation } from "../data/navigation";
+import styles from "./header-navigation.module.scss";
+import type { FunctionComponent, ReactElement, ReactNode } from "react";
 import Link from "next/link";
-import { flexContainer } from "../styles/mixins";
-import { PAGE_WIDTH } from "../styles/sizing";
+import type { Navigation } from "../data/navigation";
+import type { RecordEntry } from "../util/record-entry";
 
 export type Props = Readonly<{
 	navigation: Navigation,
 }>;
 
-const outerContainerStyles: SerializedStyles = css({
-	...flexContainer({
-		direction: "column",
-		mainAxis: "center",
-		crossAxis: "center",
-	}),
-	width: "100%",
-});
-
-const innerContainerStyles: SerializedStyles = css({
-	...flexContainer({
-		direction: "row",
-		mainAxis: "center",
-		crossAxis: "center",
-	}),
-	width: "100%",
-	maxWidth: PAGE_WIDTH,
-	listStyle: "none",
-});
-
-const navItemStyles: SerializedStyles = css({
-	padding: "10px 15px",
-	fontSize: "1.05em",
-});
-
-const navTextStyles: SerializedStyles = css({
-	
-});
-
-const linkStyles: SerializedStyles = css({
-	textDecoration: "none",
-});
-
-const nonLinkStyles: SerializedStyles = css({
-	
-});
-
-export default function HeaderNavigation({
-	navigation,
-}: Props): ReactElement {
+const HeaderNavigation: FunctionComponent<Props> = (
+	{ navigation }: Props,
+): ReactElement => {
 	
 	const innerContent: ReactNode = Object.entries(navigation).map(
-		([linkTitle, { href, children }]:
-			 [string, { href?: string, children?: Navigation }]): ReactNode => {
+		([text, { href, children }]: RecordEntry<Navigation>): ReactNode => {
 			
 			let linkItemContent: ReactNode[] = [];
 			
 			if (href !== undefined) {
 				
 				linkItemContent.push(
-					<Link key="nav-item-text" href={href} passHref>
-						<a css={[navTextStyles, linkStyles]}>
-							{linkTitle}
-						</a>
+					<Link key="nav-item-text"
+						  href={href}
+						  className={[styles.navText, styles.link].join(" ")}>
+						{text}
 					</Link>
 				);
 				
 			} else {
 				linkItemContent.push(
 					<p key="nav-item-text"
-					   css={[navTextStyles, nonLinkStyles]}>
-						{linkTitle}
+					   className={[styles.navText, styles.nonLink].join(" ")}>
+						{text}
 					</p>
 				);
 			}
@@ -93,7 +53,7 @@ export default function HeaderNavigation({
 			// }
 			
 			return (
-				<li key={linkTitle} css={navItemStyles}>
+				<li key={text} className={styles.navItem}>
 					{linkItemContent}
 				</li>
 			);
@@ -102,11 +62,13 @@ export default function HeaderNavigation({
 	);
 	
 	return (
-		<div css={outerContainerStyles}>
-			<ul css={innerContainerStyles}>
+		<div className={styles.outerContainer}>
+			<ul className={styles.innerContainer}>
 				{innerContent}
 			</ul>
 		</div>
 	);
 	
-}
+};
+
+export default HeaderNavigation;

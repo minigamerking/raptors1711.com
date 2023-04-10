@@ -1,0 +1,61 @@
+/*
+ * Created by Formative Solutions <contact@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 2:08 PM -- April 6th, 2023.
+ * Project: @frc1711/raptors1711.com
+ */
+
+$header_and_main_fill_initial_viewport: true;
+
+.body {
+	
+	min-height: 100vh;
+	min-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	
+	.headerAndMain {
+		
+		flex: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		
+		@if ($header_and_main_fill_initial_viewport) {
+			
+			min-height: 100vh;
+			
+		}
+		
+		.mainContainer {
+			
+			flex: 1;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			padding-left: var(--sizing-page-padding-left);
+			padding-right: var(--sizing-page-padding-right);
+			
+			.main {
+				
+				flex: 1;
+				width: 100%;
+				max-width: var(--sizing-page-width);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: stretch;
+				
+			}
+			
+		}
+		
+	}
+	
+}

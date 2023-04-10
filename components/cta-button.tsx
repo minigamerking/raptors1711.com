@@ -4,9 +4,8 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { MouseEventHandler, ReactElement } from "react";
-import { css, SerializedStyles } from "@emotion/react";
-import { flexContainer } from "../styles/mixins";
+import styles from "./cta-button.module.scss";
+import type { FunctionComponent, MouseEventHandler, ReactElement } from "react";
 
 export type ButtonProps = Readonly<{
 	onClick?: MouseEventHandler<HTMLDivElement> | undefined,
@@ -25,19 +24,12 @@ export type Props = Readonly<{
 	children?: string,
 }> & (ButtonProps | LinkProps);
 
-const containerStyles: SerializedStyles = css({
-	...flexContainer({ direction: "row", mainAxis: "center", crossAxis: "center" }),
-	height: "1.5rem",
-	width: "100%",
-	margin: "16px 0",
-});
-
-export default function CTAButton({
-	children, ...rest
-}: Props): ReactElement {
+const CTAButton: FunctionComponent<Props> = (
+	{ children, ...rest }: Props,
+): ReactElement => {
 	
 	let result: ReactElement = (
-		<div css={containerStyles}
+		<div className={styles.container}
 			 onClick={"onClick" in rest ? rest.onClick : undefined}>
 			{children}
 		</div>
@@ -55,4 +47,6 @@ export default function CTAButton({
 	
 	return result;
 	
-}
+};
+
+export default CTAButton;

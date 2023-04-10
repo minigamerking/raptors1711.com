@@ -1,0 +1,49 @@
+/*
+ * Created by Formative Solutions <contact@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 1:46 PM -- April 6th, 2023.
+ * Project: @frc1711/raptors1711.com
+ */
+
+/**
+ * The maximum possible width of the content within any given page.
+ */
+$sizing_page_width: 1200px;
+
+/**
+ * The amount of space between the top of the window and the beginning of any
+ * content within the header.
+ */
+$sizing_page_padding_top: 24px;
+
+/**
+ * The minimum amount of space allowed between the right side of the viewport
+ * and the content of any given page.
+ */
+$sizing_page_padding_right: 24px;
+
+/**
+ * The amount of space between the bottom of the window and the end of any
+ * content within the footer.
+ */
+$sizing_page_padding_bottom: 18px;
+
+/**
+ * The minimum amount of space allowed between the left side of the viewport and
+ * the content of any given page.
+ */
+$sizing_page_padding_left: 24px;
+
+/**
+ * The amount of space between the bottom of the header and the beginning of any
+ * content within the main page container.
+ */
+$sizing_page_spacing_header: 18px;
+
+/**
+ * The amount of space between the top of the footer and the end of any content
+ * within the main page container.
+ */
+$sizing_page_spacing_footer: 36px;
+
+@mixin configure {}

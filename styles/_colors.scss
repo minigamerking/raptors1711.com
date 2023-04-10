@@ -1,0 +1,24 @@
+/*
+ * Created by Formative Solutions <contact@formativesolutions.io>
+ *     (https://formativesolutions.io/).
+ * 1:46 PM -- April 6th, 2023.
+ * Project: @frc1711/raptors1711.com
+ */
+
+$black: #3C3C3C;
+$white: #FFF;
+$bluegray: #282C34;
+
+$color_fg_primary: $white;
+$color_bg_primary: $bluegray;
+
+@mixin configure {
+	
+	:root {
+		
+		color: var(--color-fg-primary);
+		background-color: var(--color-bg-primary);
+		
+	}
+	
+}

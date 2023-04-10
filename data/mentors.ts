@@ -4,7 +4,7 @@
  * Project: @frc1711/raptors1711.com
  */
 
-import { Bio } from "./bio";
+import type { Bio } from "./bio";
 
 export const MENTORS: Record<number, Bio[]> = {
 	2022: [

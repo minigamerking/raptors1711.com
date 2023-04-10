@@ -53,7 +53,7 @@ export const FOOTER_NAVIGATION = {
 		children: {
 			"Meet the Leads": { href: "/meet-the-team/leads" },
 			"Meet the Mentors": { href: "/meet-the-team/mentors" },
-		}
+		},
 	},
 	"Sponsor/Donate": {
 		href: "/sponsorship"
