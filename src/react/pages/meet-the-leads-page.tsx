@@ -1,9 +1,7 @@
 import "./meet-the-leads-page.scss";
-import leadImageGradyLuyt from "../../assets/images/leads/grady-luyt.jpg";
-import leadImageSageBrown from "../../assets/images/leads/sage-brown.jpg";
-import leadImageMilesLettinga from "../../assets/images/leads/miles-lettinga.jpg";
-import leadImageIanElder from "../../assets/images/leads/ian-elder.jpg";
-import leadImageGabrielSeaver from "../../assets/images/leads/gabriel-seaver.jpg";
+import leadImageAviannahStieve from "../../assets/images/leads/aviannah-stieve.jpeg";
+import leadImageMadisonVandenberg from "../../assets/images/leads/madison-vandenberg.jpeg";
+import leadImageKaydenMcmillan from "../../assets/images/leads/kayden-mcmillan.jpeg";
 import React from "react";
 import { Page } from "../elements/page-flow/page";
 import { Props, State } from "./home";
@@ -22,57 +20,36 @@ export class MeetTheLeadsPage extends React.Component<Props, State> {
 	
 	public static readonly LEADS: LeadProfile[] = [
 		{
-			name: "Grady Luyt",
-			title: "Tech Captain",
+			name: "Kayden McMillan",
+			title: "Design SME, Driver & Fearless Leader",
 			bio: <p>
 				This is Grady’s fourth year on the team, and he’s looking forward to the 2022 build season. With
 				2020 being cut short and 2021 being virtual, Grady has big goals for the team this year with it
 				being his last. On the rare times where Grady isn’t working on the robot, you can usually find him
 				trying to break into Sage’s safety prize candy safe.
 			</p>,
-			image: leadImageGradyLuyt
+			image: leadImageKaydenMcmillan
 		},
 		{
-			name: "Sage Brown",
-			title: "Non Tech and Safety Captain",
-			bio: <p>Sage spent her freshman and sophomore year on the build team and started doing safety her junior
-				year. She’s now a senior and is excited to participate with non tech and safety at comps since she
-				couldn’t last year. When she’s not at robotics, Sage can be found cross-country skiing or starting
-				her AP Lit reductions the night before they’re due.
-			</p>,
-			image: leadImageSageBrown
-		},
-		{
-			name: "Miles Lettinga",
-			title: "Build Lead and Driver",
+			name: "Aviannah Stieve",
+			title: "Communications SME",
 			bio: <p>
-				This is Miles’ second year with the RAPTORS; he previously competed with 4338 in Israel. Miles’
-				favorite part of FIRST is meeting new people and being to learn new things with the team. Miles’ is
-				looking forward to this season and has big goals like advancing to worlds. When Miles isn’t
-				building a robot, he’s busy with his AP Chemistry and Calculus homework.
-			</p>,
-			image: leadImageMilesLettinga
+				This is Aviannah's third year on the team, She is our communications SME and she has a big role in 
+				making the impact essay. You can find Aviannah generally in the computer lab, either doing things for
+				communications or talking to her peers when she should probably be working. Outside of robotics Aviannah enjoys hanging 
+			</p>, 
+			image: leadImageAviannahStieve
 		},
 		{
-			name: "Ian Elder",
-			title: "Electrical Lead",
+			name: "Madison Vandenberg",
+			title: "Electrical SME",
 			bio: <p>
 				Ian’s been doing electrical for three years on the team and loves “the holy sparkiness of 120 volt
 				AC” (but don’t tell Sage about all the sparks he makes). When he isn’t making sparks, you can find
 				Ian in his car, outside the room, waiting for robotics to start.
 			</p>,
-			image: leadImageIanElder
+			image: leadImageMadisonVandenberg
 		},
-		{
-			name: "Gabriel Seaver",
-			title: "Programming Lead",
-			bio: <p>
-				This is Gabriel’s third year sitting in the dark corner on his fancy computer. Last year, Gabriel
-				programmed a reusable code library for swerve drive for our robot. When Gabriel is not programming,
-				you can find him “crying about AP Lang”.
-			</p>,
-			image: leadImageGabrielSeaver
-		}
 	];
 	
 	public render(): React.ReactNode {
