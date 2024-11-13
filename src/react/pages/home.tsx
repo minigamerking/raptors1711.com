@@ -13,7 +13,7 @@ export class Home extends React.Component<Props, State> {
     	return (
 			<Page name="home">
 				<img src={teamKickoffPicture}
-					 alt="The Raptors at their 2019 kickoff event."
+					 alt="The Raptors after winning the Traverse City event in 2024."
 				     className="banner-image" />
 				<p>
 					FIRST Robotics Team 1711, the RAPTORS, are a nationally competitive FIRST robotics team based in
